@@ -698,90 +698,48 @@
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form>
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      class="form-control"
-                      placeholder="Your Name"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    id="message"
-                    rows="5"
-                    placeholder="Message"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                </div>
-                <div class="text-center">
-                  <button type="submit" onsubmit="gotowhatsapp();">
-                    Send Message
-                  </button>
-                </div>
-                <script>
-                  function gotowhatsapp() {
-                    var name = document.getElementById("name").value;
-                    var email = document.getElementById("email").value;
-                    var subject = document.getElementById("subject").value;
-                    var message = document.getElementById("message").value;
+                <form  class="php-email-form">
+<div class="row">
+  <div class="col-md-6 form-group">
+    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+  </div>
+  <div class="col-md-6 form-group mt-3 mt-md-0">
+    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+  </div>  
+</div>
+<div class="form-group mt-3">
+  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+</div>
+<div class="form-group mt-3">
+  <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
+</div>
+<button type="submit" onclick="gotowhatsapp();" style="letter-spacing: 1.5px;">Send Message</button>
+<script>
+function gotowhatsapp() {
 
-                    if (
-                      name.value === "" ||
-                      email.value === "" ||
-                      subject.value === "" ||
-                      message.value === ""
-                    ) {
-                      alert("The Form Fields Cannot Be Empty");
-                    } else {
-                      var url =
-                        "https://wa.me/919398954816?text=Hi%20Karthik..!You_got_msg_from_chaitu's_portfolio" +
-                        "Name: " +
-                        name +
-                        "%0a" +
-                        "Email: " +
-                        email +
-                        "%0a" +
-                        "Subject: " +
-                        subject +
-                        "%0a" +
-                        "Message: " +
-                        message;
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value
+var subject = document.getElementById("subject").value;
+var message = document.getElementById("message").value;
 
-                      window.open(url, "_blank").focus();
-                    }
-                  }
-                </script>
-              </form>
+if( name.value === ''||
+email.value === ''||
+subject.value === ''||
+message.value === ''){
+alert('The Form Fields Cannot Be Empty');
+
+}else{
+var url = "https://wa.me/919398954816?text=Hi%200922website"
+  + "Name: " + name + "%0a"
+  + "Email: " + email + "%0a"
+  + "Subject: " + subject + "%0a"
+  + "Message: " + message;
+
+window.open(url, '_blank').focus();
+}
+}
+</script>
+</form>
             </div>
           </div>
         </div>
